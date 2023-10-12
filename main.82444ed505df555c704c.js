@@ -13508,11 +13508,13 @@ function getReceiptWinnerElement() {}
  * @returns {HTMLElement}
  */
 
-function getFullUrl(relativeUrl) {
-  var isStaging = window.location.hostname.includes('github.io');
-  var baseURL = isStaging ? '/halloween.veganrussian.ru' : '';
-  return "".concat(baseURL).concat(relativeUrl);
-}
+// function getFullUrl(relativeUrl) {
+//   const isStaging = window.location.hostname.includes('github.io');
+//   const baseURL = isStaging ? '/halloween.veganrussian.ru' : '';
+//   return `${baseURL}${relativeUrl}`;
+// }
+//     href="${getFullUrl(`/recipe.html#${recipe.id}`)}"
+
 function getReceiptElement(_ref4) {
   var place = _ref4.place,
     classes = _ref4.classes,
@@ -13520,7 +13522,7 @@ function getReceiptElement(_ref4) {
   var root = document.createElement("article");
   root.classList = "recipe ".concat(classes);
   var image = place ? "<data-lazy src=\"./images/medals/".concat(place, ".svg\">") : "";
-  root.innerHTML = "\n  <a\n    href=\"".concat(getFullUrl("/recipe.html#".concat(recipe.id)), "\"\n    class=\"recipe__link\"\n    title=\"\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0440\u0435\u0446\u0435\u043F\u0442\u0430: ").concat(recipe.title, "\">\n  </a>\n  <div class=\"recipe__wrapper\">\n    <div class=\"recipe__image\">\n      <img class=\"lazy-img\" data-lazy=\"").concat(recipe.image, "\" alt=\"\u0424\u043E\u0442\u043E \u0440\u0435\u0446\u0435\u043F\u0442\u0430\">\n    </div>\n    <div class=\"recipe__content ").concat(place ? "recipe__content--winner" : "", "\">\n      <div>\n        <p class=\"recipe__category\">").concat(recipe.category, "</p>\n        <p class=\"recipe__name\">").concat(recipe.title, "</p>\n      </div>\n      ").concat(image, "\n    </div>\n  </div>\n  ");
+  root.innerHTML = "\n  <a\n    href=\"/recipe.html#".concat(recipe.id, "\"\n    class=\"recipe__link\"\n    title=\"\u041F\u0435\u0440\u0435\u0439\u0442\u0438 \u043D\u0430 \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443 \u0440\u0435\u0446\u0435\u043F\u0442\u0430: ").concat(recipe.title, "\">\n  </a>\n  <div class=\"recipe__wrapper\">\n    <div class=\"recipe__image\">\n      <img class=\"lazy-img\" data-lazy=\"").concat(recipe.image, "\" alt=\"\u0424\u043E\u0442\u043E \u0440\u0435\u0446\u0435\u043F\u0442\u0430\">\n    </div>\n    <div class=\"recipe__content ").concat(place ? "recipe__content--winner" : "", "\">\n      <div>\n        <p class=\"recipe__category\">").concat(recipe.category, "</p>\n        <p class=\"recipe__name\">").concat(recipe.title, "</p>\n      </div>\n      ").concat(image, "\n    </div>\n  </div>\n  ");
   return root;
 }
 
@@ -13736,4 +13738,4 @@ function createSliderForMobile(e) {
 
 /******/ })()
 ;
-//# sourceMappingURL=main.62af34e83207bfdf9c5e.js.map
+//# sourceMappingURL=main.82444ed505df555c704c.js.map
